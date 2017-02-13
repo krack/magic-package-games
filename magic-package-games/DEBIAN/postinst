@@ -1,0 +1,11 @@
+#!/bin/bash
+#disabled tcp_timestamp for league of legends
+if ! grep -q "net.ipv4.tcp_timestamps = 0"  /etc/sysctl.conf; then
+	echo "net.ipv4.tcp_timestamps = 0" >> /etc/sysctl.conf
+	echo "disabled tcp_timestamps"
+fi
+
+echo "install done"
+
+
+
